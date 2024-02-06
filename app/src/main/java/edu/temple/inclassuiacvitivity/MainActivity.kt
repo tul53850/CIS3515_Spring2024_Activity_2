@@ -13,12 +13,11 @@ class MainActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinner)
         val displayTextView = findViewById<TextView>(R.id.textDisplay)
 
-        /* TODO Step 1: Populate this array */
+        /* Step 1: Populate this array */
         val numberArray = (2..100 step 2).toList().toTypedArray()
 
-        /* TODO Step 2: Create adapter to display items from array in Spinner */
-        //spinner.adapter = ArrayAdapter...
-
+        /* Step 2: Create adapter to display items from array in Spinner */
+        spinner.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray)
 
         // TODO Step 3: Change TextView's text size to the number selected in the Spinner */
         //spinner.onItemSelectedListener = object: ...
